@@ -1,0 +1,212 @@
+/* aqui estamos aplicando el color tomato a todo el body*/
+body {
+    color: black;
+}
+/* aqui le aplicamos el color azul solo al titulo con id = titulo, para llamar a un id se usa # */
+#titulo {
+    color: mediumblue;
+}
+/* aqui le aplicamos color verde a los parrafos con clase = texto, para llamar a una clase se usa . */
+.texto {
+    color: mediumseagreen;
+}
+
+/* con p. mecionamos solo a los parrafos con la clase que se desee
+   en css tine prioridad el codigo del final sobre el del principio*/
+p.texto {
+    color: mediumvioletred;
+}
+p.especial {
+    color: coral;
+}
+/* aqui le estamos indicando que en todas las etiquetas de p contenidas en un div cambien su color*/
+div p {
+    color: mediumpurple;
+}
+/* aqui estamos asignando un color a dos etiquetas que estan contenidas en un div*/
+div h2, div h3 {
+    color: brown;
+}
+
+/*
+se le puede asignar un color a una etiqueta de 3 formas
+
+.color {
+    color: #00f;
+}
+
+.color {
+    color: #000000;
+}
+
+.color {
+    color: rgb(0,0,0);
+}
+
+*/
+
+.color {
+/*  estamos asignando un borde a una etiqueta, tamnio, color, estilo
+    tipos de estilo:
+    dotted
+    dashed
+    solid
+    double
+    groove
+    ridge
+    inset
+    outset
+    none
+    hidden
+*/
+   /*  border: 5px black solid; */
+   /* asignando estilo, color, borde redondeado, tamanio*/
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    /* hay distintas medidas que se pueden aplciar en css px, cm, mm, etc*/
+    border-width: 5px;
+}
+
+#fondo {
+    color: aliceblue;
+    /* asignando un color al fondo
+        con rgba podemos aplicarle un colo y en ultimo valor la transparencia desde 0 a 1*/
+    background-color: rgba(255, 235, 205, 0.5);
+    /* opacity: 0.3; con opacity podemos aplicar una opacidad a la etiqueta completa */
+    
+    height: 300px;
+    background-image: url(img/1.png);
+
+    /*hay distintas propiedades de background-size, cotains, auto, etc*/
+    background-size: contain;
+
+    background-repeat: no-repeat; /* usamos esto para que no se repita la imagen
+    tambien se pueden configurar varias formas de repeticion */
+
+    background-position: left top; /* usamos position para cambiar los valores de la posicion*/
+    /* background: #f00 url(img/1.png) repeat-y center bottom / 100px 100px;  tambien podemos aplicar las propiedad en una sola linea de esta manera*/
+
+}
+
+.margen {
+    background-color: chocolate;
+    margin: 15px 20px 25px 30px ; /*margin genera un margen fuera del elemento*/
+    padding: 30px 25px 20px 15px; /*padding genera un margen dentro del elemento*/
+    border: solid 1px black;
+   /*  overflow: scroll; se puede ocupar para agregar scroll cuando un elemnto es muy pequenio y contiene algun texto grande, tambine se puede usar hidden o visible */
+   outline: 1px solid red; /* es para agregar una linea afuera de el borde*/
+}
+
+.text {
+    /* text-align es para poner el texto centrado, a la derechao, izquierda, justificado*/
+    text-align: center;
+    /* underline es para aplicar subrayado*/
+    text-decoration: underline;
+    /* text-shadow le agrega una sombra al texto*/
+    text-shadow: 3px 3px 5px blue;
+    /*font-family es para cargar un tipo de letra si no puede cargar el primero seguira intentando cargar el segundo*/
+    font-family: Open Sans, Helvetica, sans-serif;
+}
+
+/*Color de defecto de un link*/
+a:link {
+    color: blue;
+}
+/*Color de un link despues de ser visitado*/
+a:visited {
+    color: green;
+}
+/*Color del link cuando el mouse posa sobre*/
+a:hover {
+    color: yellow;
+}
+/*Color del link cuando lo pinchas*/
+a:active {
+    color: red;
+}
+
+ul {
+    background-color: bisque;
+    list-style-type: lower-roman;
+    /* padding-left: 0; */
+    /* list-style-position: inside; */
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /*Con esto quitamos los espacios entre losbordes de la tabla*/
+}
+
+th, td {
+    border: solid 1px black;
+    padding: 5px;
+}
+
+th {
+    background-color: blanchedalmond;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(153, 137, 241);
+}
+
+tr:hover {
+    background-color: rgb(194, 194, 194);
+    cursor: pointer; /*Con esto aparece la manito sobre los tr*/
+}
+
+span {
+    display: block; /*Esta propiedad es para que un elemento ocupe todo el ancho de la pagina para que los elementos partan en una nueva linea*/
+    /* display: none; */ /*Esta propiedad es para que los elemento no aparezcan*/
+    /* visibility: hidden; */ /*Esta propiedad es para que los elemento no aparezcan*/
+    max-width: 300px; /*Esta propiedad es para asignar un ancho maximo pero si es ancho es menor puede cambiar, por ejemplo cuando se achica una pagina */
+    background-color: mediumseagreen;
+}
+
+.inline { /* inline no se le puden asignar valor de width ni height */
+    display: inline; /*Esta propiedad es para que un elemento no ocupe todo el ancho de la pagina y para que los elementos partan en la misma linea*/
+}
+
+#position {
+    position: sticky; /*Podemos asignar el tipo de position, sticky es para que el elemento siempre se mantenga en la posicion dada incluso al bajar en la pagina */
+    left: 20px;
+    top: 25px;
+}
+
+.left {
+    float: left; /* Toma el elemento html y lo hace flotar hacia la izquierda */
+    width: 200px;
+    height: 200px;
+}
+
+.right{
+    float: right;
+    width: 100px;
+}
+
+.container {
+    height: 200px;
+}
+
+.column { /* forma de crear columnas */
+/*     border: solid 0px black;
+    border-radius: 5px; */
+    margin: 0;
+    padding: 10px 0;
+    width: 33.3%;
+}
+
+.inline-block { /* se usan para crear menus de navegacion */
+    display: inline-block; 
+    height: 55px;
+    background-color: mediumseagreen;
+}
+
+.center { /* una manera de centrar un elemento */
+    text-align: center; /* para centrar el texto */
+    width: 200px;
+    margin: 0 auto;
+    background-color: mediumslateblue;
+}

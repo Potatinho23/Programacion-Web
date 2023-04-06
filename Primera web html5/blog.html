@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de yo</title>
+</head>
+<body>
+    <!--header se usa para agrupar links o algunas imagenes, se pueden crear tantas etiquetas de header como queramos mientras no esten dentro de <header> o <footer>
+        footer se utiliza para colocar el pie de pagina de la web, podemos tener multiples etiquetas de footer, puede contener informacion de copyright, de contacto, del sitio, volver arriba de la pagina
+        section es para definir secciones dentro de la aplicacion se pueden colocar las etriquetas que queramos dentro
+        article se utiliza para poder definir  contenido completamente independiente, por ejemplo un post en facebook
+        id es para asginar id a algun elemento, para luego configurarlo con css o JS
+        class es para asignar clases a algun elemento, para luego configurarlo con css o JS
+        id y class sivern para identificar elementos que luego pueden ser seleccionados, id es unico y class puede pertenecer a muchos elementos-->
+    <header>
+        <h1 id="titulo">Blog de yo</h1>
+    </header>
+    <!--div se ultiliza para agrupar contenido -->
+    <div>
+        <p>Soy un parrafo dentro de div</p>
+    </div>
+    <section>
+        <article class="post">
+            <h2>Titulo de mi post</h2>
+            <p>Descripcion de mi post</p>
+            <img src="img/1.png" width="400">
+            <p>Texto del post</p>
+        </article>
+        <article class="post">
+            <h2>Titulo de mi post 2</h2>
+            <p>Descripcion de mi post 2</p>
+            <img src="img/2.jpg" width="200">
+            <p>Texto del post 2</p>
+        </article>
+        <article class="post">
+            <h2>Titulo de mi post 3</h2>
+            <p>Descripcion de mi post 3</p>
+            <img src="img/3.jpg" width="300">
+            <p>Texto del post 3</p>
+        </article>                
+    </section>
+    <footer>
+        <a href="#titulo"> Ir arriba</a>
+        <br>
+        <a href="mailto:samuel@gmail.com">samuel@gmail.com</a>
+        <p>Copyright 2022</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!--En title se escribe el titulo de la pestania de la pagina web -->
+    <title>Mi primer pagina web</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <!--Pequenia introduccion a css donde aplicaremos un style a table, th y td-->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Con h1-h6 se escriben titulos y subtitulos se puede de h1 hasta h6 -->
+    <h1>Hola</h1>
+    <h2> Chao</h2>
+    <h3>Titulo</h3>
+    <h4>Titulo</h4>
+    <h5>Titulo</h5>
+    <h6>Titulo</h6>
+    <!--hr es para separar secciones de la pagina-->
+    <hr>
+    <h1>2</h1>
+    <!--Con p se pueden crear parrafos de texto-->
+    <p>Esta es mi primera pagina web</p>
+    <!--span es para despues reutilizar una parte del texto, ademas se le puso color azul con css-->
+    <p>Texto de <span style="color: blue"> prueba</span> para probar span y un poco de css</p>
+    <!--br es para utilizar saltos de linea dentro de un texto-->
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Ipsum has been the industry's standard dummy text ever since the 1500s, <br> when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <!--Con a generamos un hipervinculo a alguna otra pagina, con target="_blank" es para que se abra en otra pestania-->
+    <a target="_blank" href="http://www.google.cl"> ir a google</a>
+    <br>
+    <!--Con img podemos cargar una imagen ya sea local o de la web-->
+    <img src="img/1.png" width="400">
+    <hr>
+    <!--Form se usa para recopilar informacion del usuario 
+        Input es para que aparezca un lugar donde escribir texto 
+        Label para ponerle una etiqueta
+        For es para asignar un identificador del campo al cual le queremos dar el foco
+        id colocar el mismo texto que en el identificador de for
+        name es para asignar el nombre a la variable
+        placeholder es para poner una etiqueta dentro de un cuadro de texto
+        type es para asignar que tipo de "valor" es nuestro input, por ejemplo passwordd, email, etc...
+        action es para asignar la ruta donde se envian los datos
+        method es para asignar la manera en que se envian los datos desde la pagina
+        value es para asginar un valor por defecto en los inputs-->
+    <form action="/formulario" method="get">
+        <label for="nombre">Nombre</label>
+        <input value="Yo" type="text" id="nombre" name="nombre" placeholder="Nombre aqui..."/>
+        <br>
+        <label for="pass">Contrasenia</label>
+        <input type="password" id="pass" name="pass" placeholder="Contrasenia aqui..."/>
+        <br>
+        <!--textarea es para ingresar texto tipo comentarios
+            cols es para asignar las columnas
+            rows es para asignar las filas-->
+        <label for="comentario">Comentario</label>
+        <br>
+        <textarea name="comentario" id="comentario" placeholder="Ingrese comentario" cols="50" rows="10"></textarea>
+        <br>
+        <!--input tipo boton para enviar datos al servidor-->
+        <input type="submit" name="" id=""/>
+        <!--button es para poner botones de distintos tipos
+            type button es un boton que no hace nada y se tiene que programar su comportamiento con JS
+            type reset pone los inputs por defecto
+            type submit sube los datos al servidor, es mas recomendable usar estos botones que un input tipo submit porque es mucho mas personalizable-->
+        <button type="button"> Tipo botón </button>
+        <button type="reset">Tipo reset</button>
+        <button type=" submit">Tipo submit</button>
+    </form>
+    <hr>
+    <!--ul es lista no ordenada-->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+
+    <!--ol es lista ordenada
+        con value podemos asignar un valor inicial dentro de <li> seria <li value = "10"> y comenzaria desde el 10-->
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+
+        <!--creado sub lista dentro de una lista
+            con style se le puede asginar distintos tipos de numeracion por ejemplo romana, alfabetica, etc-->
+        <li>
+            <ol>
+                <li style="list-style-type:lower-roman;">sub elemento 1</li>
+                <li style="list-style-type:lower-roman;">sub elemento 2</li>
+                <li style="list-style-type:lower-roman;">sub elemento 3</li>
+            </ol>
+        </li>
+    </ol>
+
+    <hr>
+    <!--table es para crear tablas
+        tr es para agregar filas
+        th es para una cabezera
+        td es para definir elementos estandares en la tabla
+        style se uso para agregar un borde alrededor de la tabla
+        style="width: 500px;" es para pone un tamanio a la tabla
+        thead es para agrupar elementos que se encuentran en las cabezeras de las tablas
+        tbody es para agrupar todas las filas que sean del cuerpo de la tabla-->
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Manzanas</td>
+                <td>Gratis</td>
+            </tr>
+            <tr>
+                <td>Peras</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Naranjas</td>
+                <td>$1000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>$3000</td>
+        </tfoot>
+    </table>
+    <a target="_blank" href="blog.html">Ir al blog de yo</a>
+</body>
+</html>
